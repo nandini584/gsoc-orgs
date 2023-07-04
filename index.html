@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <title>Gsoc organization</title>
+</head>
+<body>
+    <div>
+        <img src="./assets/decoration.png" alt="" class="radial">
+    </div>
+    <div class="main">
+       
+        <h1 class="heading">Gsoc Organizations</h1>
+        <div class="list">
+            <form action="" class="form">
+                <input type="text" name="name" placeholder="Organization Name" class="singlecell bg">
+                <input type="text" name="stack" placeholder="Tech Stacks" class="singlecell bg">
+                <input type="text" name="year" placeholder="Year" class="singlecell bg">
+                <button type ="submit" class="singlecell bg">Add Organization</button>
+            </form>
+            <ul class="orgslist"></ul>
+        </div>
+
+    </div>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBva7NGA9c1qq80UnrUEyLELi8G0FztRrQ",
+            authDomain: "gsoc-organisations.firebaseapp.com",
+            projectId: "gsoc-organisations",
+            storageBucket: "gsoc-organisations.appspot.com",
+            messagingSenderId: "284517990668",
+            appId: "1:284517990668:web:7bdd885f1bdf81082a4929",
+            measurementId: "G-QHZ0PR8MTP"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
